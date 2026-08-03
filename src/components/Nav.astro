@@ -14,7 +14,7 @@
 
   <nav class="nav-menu" aria-label="Primary navigation">
     <div class="nav-links">
-      <a href="#" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About</a>
       <details class="nav-group">
         <summary class="nav-link nav-summary">What we do</summary>
         <div class="submenu-panel">
@@ -39,7 +39,6 @@
           <a href="#" class="dropdown-link">Item</a>
         </div>
       </details>
-      <a href="#" class="nav-link">Contact</a>
     </div>
     <a href="#" class="cta-button">Partner With Us</a>
   </nav>
@@ -275,4 +274,37 @@
     }
   }
 </style>
+
+<script type="module">
+  if (typeof window !== 'undefined') {
+    // Close other open <details> when one opens
+    const initNavGroups = () => {
+      const containers = document.querySelectorAll('.nav-container');
+      containers.forEach(container => {
+        const groups = Array.from(container.querySelectorAll('details.nav-group'));
+        groups.forEach(g => {
+          g.addEventListener('toggle', () => {
+            if (g.open) {
+              groups.forEach(o => { if (o !== g) o.open = false; });
+            }
+          });
+        });
+
+        // Close all groups when clicking outside the nav container
+        document.addEventListener('click', (e) => {
+          if (!container.contains(e.target)) {
+            groups.forEach(o => { o.open = false; });
+          }
+        });
+      });
+    };
+
+    // Init on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initNavGroups);
+    } else {
+      initNavGroups();
+    }
+  }
+</script>
 

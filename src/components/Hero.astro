@@ -1,42 +1,47 @@
 ---
-import heroImage from '../assets/background.svg';
+import { Image } from 'astro:assets';
+import heroImage from '@assets/background.svg';
 
 export interface Props {
 	eyebrow?: string;
 	title?: string;
+	titleHtml?: string;
 	description?: string;
 	primaryText?: string;
 	primaryHref?: string;
 	secondaryText?: string;
 	secondaryHref?: string;
 	imageAlt?: string;
+	imageSrc?: any;
 }
 
 const {
 	eyebrow = 'Build partnerships that scale',
 	title = 'Partner with Malue to unlock better value and growth.',
+	titleHtml,
 	description = 'We design strategic collaborations, launch new products, and create stronger customer experiences across every channel. Let’s build something exceptional together.',
-	primaryText = 'Partner With Us',
-	primaryHref = '#',
-	secondaryText = 'Learn More',
-	secondaryHref = '#',
+	// primaryText = 'Partner With Us',
+	// primaryHref = '#',
+	// secondaryText = 'Learn More',
+	// secondaryHref = '#',
 	imageAlt = 'Illustration of growth and collaboration',
+	imageSrc,
 } = Astro.props as Props;
 ---
 
 <section class="hero">
 	<div class="hero-copy">
 		<p class="eyebrow">{eyebrow}</p>
-		<h1>{title}</h1>
+		{titleHtml ? <h1 set:html={titleHtml} /> : <h1>{title}</h1>}
 		<p>{description}</p>
-		<div class="hero-actions">
-			<a href={primaryHref} class="button primary">{primaryText}</a>
-			<a href={secondaryHref} class="button secondary">{secondaryText}</a>
-		</div>
+		<!-- <div class="hero-actions">
+			<a href="#" class="button primary">Partner With Us</a>
+			<a href="#" class="button secondary">Learn More</a>
+		</div> -->
 	</div>
 
 	<div class="hero-visual">
-		<img src={heroImage.src} alt={imageAlt} />
+		<Image src={imageSrc ?? heroImage} alt={imageAlt} />
 	</div>
 </section>
 
@@ -64,6 +69,7 @@ const {
 
 	h1 {
 		margin: 0 0 24px;
+        font-weight: 500;
 		font-size: clamp(2.75rem, 5vw, 4.5rem);
 		line-height: 1.02;
 		letter-spacing: -0.04em;
@@ -71,6 +77,7 @@ const {
 	}
 
 	.hero-copy p {
+        text-wrap: balance;
 		margin: 0 0 28px;
 		max-width: 560px;
 		line-height: 1.8;
