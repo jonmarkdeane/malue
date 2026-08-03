@@ -19,6 +19,10 @@ import Head from '../components/Head.astro';
 
 <style>
 	:root {
+		--off-white: #fafafa;
+		--brand-primary: #0f172a;
+		--brand-secondary: #334155;
+		--brand-accent: #d97706;
 		--brand-cta: #F29966;
 		--site-max-width: 1280px;
 	}
@@ -33,8 +37,8 @@ import Head from '../components/Head.astro';
 	body {
 		min-height: 100vh;
 		font-family: Inter, Arial, sans-serif;
-		background: #f8fafc;
-		color: #0f172a;
+		background: var(--off-white);
+		color: var(--brand-primary);
 	}
 
 	.wrapper {
