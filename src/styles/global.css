@@ -5,7 +5,7 @@
 :root {
   --off-white: #fafafa;
   --dark-bg: #252525;
-  --brand-primary: #0f172a;
+  --text-primary: #0f172a;
   --brand-secondary: #334155;
   --brand-accent: #245ca6;
   --brand-cta: #f29966;
@@ -26,7 +26,7 @@ body {
 body {
   font-family: var(--font-inter), Inter, Arial, sans-serif;
   background: var(--dark-bg);
-  color: var(--brand-primary);
+  color: var(--text-primary);
 }
 
 main,

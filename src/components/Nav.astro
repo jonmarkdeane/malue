@@ -14,33 +14,33 @@
 
   <nav class="nav-menu" aria-label="Primary navigation">
     <div class="nav-links">
-      <a href="./about" class="nav-link">About</a>
+      <a href="/about" class="nav-link">About</a>
       <details class="nav-group">
-        <summary class="nav-link nav-summary">What we do</summary>
+        <summary class="nav-link nav-summary"><a href="/what-we-do">What we do</a></summary>
         <div class="submenu-panel">
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
+          <a href="/whatwedo" class="dropdown-link">Overview</a>
+          <a href="/whatwedo#services" class="dropdown-link">Services</a>
+          <a href="/whatwedo#outcomes" class="dropdown-link">Outcomes</a>
         </div>
       </details>
       <details class="nav-group">
-        <summary class="nav-link nav-summary">How we work</summary>
+        <summary class="nav-link nav-summary"><a href="/how-we-work">How we work</a></summary>
         <div class="submenu-panel">
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
+          <a href="/how-we-work" class="dropdown-link">Approach</a>
+          <a href="/how-we-work#process" class="dropdown-link">Process</a>
+          <a href="/how-we-work#team" class="dropdown-link">Team</a>
         </div>
       </details>
       <details class="nav-group">
-        <summary class="nav-link nav-summary">Investors</summary>
+        <summary class="nav-link nav-summary"><a href="/investors">Investors</a></summary>
         <div class="submenu-panel">
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
-          <a href="#" class="dropdown-link">Item</a>
+          <a href="/investors" class="dropdown-link">Why Invest</a>
+          <a href="/investors#portfolio" class="dropdown-link">Portfolio</a>
+          <a href="/investors#contact" class="dropdown-link">Connect</a>
         </div>
       </details>
     </div>
-    <a href="#" class="cta-button">Partner With Us</a>
+    <a href="/contact" class="cta-button">Partner With Us</a>
   </nav>
 </div>
 
@@ -95,6 +95,11 @@
     min-width: 0;
   }
 
+  .nav-link a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
   .nav-group {
     position: relative;
   }
@@ -145,6 +150,15 @@
     min-width: 170px;
   }
 
+  @media (hover: hover) and (min-width: 769px) {
+    .nav-group:hover .submenu-panel,
+    .nav-group:focus-within .submenu-panel {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
   .nav-group[open] .submenu-panel {
     opacity: 1;
     pointer-events: auto;
@@ -156,26 +170,25 @@
     color: #475569;
     font-size: 0.95rem;
     padding: 8px 0;
-    transition: color 0.2s ease;
   }
 
   .dropdown-link:hover,
   .dropdown-link:focus-visible {
-    color: #0f172a;
+    text-decoration: none;
   }
 
   .nav-link {
     text-decoration: none;
     color: #334155;
     font-weight: 500;
-    transition: color 0.2s ease;
   }
 
   .nav-link:hover,
   .nav-link:focus-visible,
   .nav-summary:hover,
   .nav-summary:focus-visible {
-    color: #111827;
+    color: #334155;
+    text-decoration: none;
   }
 
   .cta-button {
