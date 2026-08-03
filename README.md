@@ -1,3 +1,6 @@
+Malue site built on Astro
+
+
 # Astro Starter Kit: Basics
 
 ```sh
