@@ -5,6 +5,7 @@ import { defineConfig, fontProviders } from "astro/config";
 export default defineConfig({
   site: "https://jonmarkdeane.github.io",
   base: "/malue/",
+  output: "static",
   fonts: [
     {
       provider: fontProviders.fontsource(),

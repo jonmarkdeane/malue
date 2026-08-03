@@ -12,8 +12,9 @@ import { ClientRouter } from "astro:transitions";
   <link rel="icon" href="/favicon.ico" />
   <Font cssVariable="--font-inter" />
   <meta name="generator" content={Astro.generator} />
+    <base href={import.meta.env.BASE_URL} />
+
   <title>malue</title>
-  <base href="{import.meta.env.BASE_URL}" />
   <ClientRouter />
 
 </head>
