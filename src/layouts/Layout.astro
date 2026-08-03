@@ -1,25 +1,28 @@
 ---
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Head from '../components/Head.astro';
 ---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+	<Head />
 	<body>
-		<div class="site-shell">
-			<Header />
+		<Header />
+
+		<div class="wrapper">
 			<slot />
 		</div>
+
+		<Footer />
 	</body>
 </html>
 
 <style>
+	:root {
+		--brand-cta: #F29966;
+		--site-max-width: 1280px;
+	}
+
 	html,
 	body {
 		margin: 0;
@@ -29,13 +32,13 @@ import Header from '../components/Header.astro';
 
 	body {
 		min-height: 100vh;
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		font-family: Inter, Arial, sans-serif;
 		background: #f8fafc;
 		color: #0f172a;
 	}
 
-	.site-shell {
-		width: min(100%, 1440px);
+	.wrapper {
+		width: min(100%, var(--site-max-width));
 		margin: 0 auto;
 		min-height: 100vh;
 	}
