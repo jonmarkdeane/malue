@@ -1,7 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import Hero from '@components/Hero.astro';
+import ManagementTeam from '@components/ManagementTeam.astro';
 import heroImage from '@assets/heroes/malue-home-hero.png';
+import photoA from '@assets/background.svg';
+import photoB from '@assets/background.svg';
+import photoC from '@assets/background.svg';
+import photoD from '@assets/background.svg';
 ---
 
 <Layout>
@@ -9,11 +14,36 @@ import heroImage from '@assets/heroes/malue-home-hero.png';
     eyebrow="About Malue"
 		titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
 		description="Making every penny count means helping healthcare adopt what works"
-		// primaryText="Partner With Us"
-		// primaryHref="/partner"
-		// secondaryText="Learn More"
-		// secondaryHref="/about" -->
 		imageAlt="Hero image"
 		imageSrc={heroImage}
+	/>
+
+	<ManagementTeam
+	  members={[
+	    {
+	      name: 'Nick Cunningham-Moorat',
+	      role: 'Chief Executive Officer',
+	      bio: 'Commercial leader and serial entrepreneur with experience across corporate leadership, financial services, fintech, manufacturing and technology-led business creation.',
+	      imageSrc: photoA,
+	    },
+	    {
+	      name: 'Jim Deane',
+	      role: 'Chief Technology Officer',
+	      bio: 'Technology leader with extensive experience delivering complex IT solutions across financial services and other regulated markets.',
+	      imageSrc: photoB,
+	    },
+	    {
+	      name: 'Matt Silver-Vallance',
+	      role: 'Chief Business Development Officer',
+	      bio: 'Healthcare industry specialist with deep commercial experience, focused on partnerships, adoption and market development.',
+	      imageSrc: photoC,
+	    },
+	    {
+	      name: 'Simon Withey',
+	      role: 'Domain Expert',
+	      bio: 'Consultant plastic and reconstructive surgeon with long-standing commitment to healthcare improvement, clinical standards and value.',
+	      imageSrc: photoD,
+	    },
+	  ]}
 	/>
 </Layout>

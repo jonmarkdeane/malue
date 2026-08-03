@@ -1,0 +1,97 @@
+---
+import TeamCard from "@components/TeamCard.astro";
+export interface Member {
+  name: string;
+  role: string;
+  bio: string;
+  imageSrc: any;
+  imageAlt?: string;
+}
+
+export interface Props {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  members: Member[];
+}
+
+const { title = "Our leadership team", members = [] } = Astro.props as Props;
+---
+
+<div class="wrapper">
+  <section class="management-team">
+    <div class="section-copy">
+      <h2>{title}</h2>
+    </div>
+
+    <div class="team-grid">
+      {
+        members.map((member) => (
+          <TeamCard
+            name={member.name}
+            role={member.role}
+            bio={member.bio}
+            imageSrc={member.imageSrc}
+            imageAlt={member.imageAlt}
+          />
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+
+<style>
+  .management-team {
+    display: grid;
+    gap: 40px;
+
+  }
+
+  .eyebrow {
+    margin: 0 0 14px;
+    color: #d97706;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0 0 18px;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.05;
+    color: #0f172a;
+  }
+
+  .section-copy p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+
+  .team-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @media screen and (max-width: 1120px) {
+    .team-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .management-team {
+      padding: 60px 0 0;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,149 +1,152 @@
 ---
-import { Image } from 'astro:assets';
-import heroImage from '@assets/background.svg';
+import { Image } from "astro:assets";
+import heroImage from "@assets/background.svg";
 
 export interface Props {
-	eyebrow?: string;
-	title?: string;
-	titleHtml?: string;
-	description?: string;
-	primaryText?: string;
-	primaryHref?: string;
-	secondaryText?: string;
-	secondaryHref?: string;
-	imageAlt?: string;
-	imageSrc?: any;
+  eyebrow?: string;
+  title?: string;
+  titleHtml?: string;
+  description?: string;
+  primaryText?: string;
+  primaryHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+  imageAlt?: string;
+  imageSrc?: any;
 }
 
 const {
-	eyebrow = 'Build partnerships that scale',
-	title = 'Partner with Malue to unlock better value and growth.',
-	titleHtml,
-	description = 'We design strategic collaborations, launch new products, and create stronger customer experiences across every channel. Let’s build something exceptional together.',
-	// primaryText = 'Partner With Us',
-	// primaryHref = '#',
-	// secondaryText = 'Learn More',
-	// secondaryHref = '#',
-	imageAlt = 'Illustration of growth and collaboration',
-	imageSrc,
+  eyebrow = "Build partnerships that scale",
+  title = "Partner with Malue to unlock better value and growth.",
+  titleHtml,
+  description = "We design strategic collaborations, launch new products, and create stronger customer experiences across every channel. Let’s build something exceptional together.",
+  // primaryText = 'Partner With Us',
+  // primaryHref = '#',
+  // secondaryText = 'Learn More',
+  // secondaryHref = '#',
+  imageAlt = "Illustration of growth and collaboration",
+  imageSrc,
 } = Astro.props as Props;
 ---
 
-<section class="hero">
-	<div class="hero-copy">
-		<p class="eyebrow">{eyebrow}</p>
-		{titleHtml ? <h1 set:html={titleHtml} /> : <h1>{title}</h1>}
-		<p>{description}</p>
-		<!-- <div class="hero-actions">
+<div class="wrapper">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{eyebrow}</p>
+      {titleHtml ? <h1 set:html={titleHtml} /> : <h1>{title}</h1>}
+      <p>{description}</p>
+      <!-- <div class="hero-actions">
 			<a href="#" class="button primary">Partner With Us</a>
 			<a href="#" class="button secondary">Learn More</a>
 		</div> -->
-	</div>
+    </div>
 
-	<div class="hero-visual">
-		<Image src={imageSrc ?? heroImage} alt={imageAlt} />
-	</div>
-</section>
+    <div class="hero-visual">
+      <Image src={imageSrc ?? heroImage} alt={imageAlt} />
+    </div>
+  </section>
+</div>
 
 <style>
-	.hero {
-		display: grid;
-		grid-template-columns: 1.2fr 1fr;
-		align-items: top;
-		gap: 48px;
-		padding: 64px 0;
-	}
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: top;
+    gap: 48px;
+  }
 
-	.hero-copy {
-		max-width: 620px;
-	}
+  .hero-copy {
+    max-width: 620px;
+  }
 
-	.eyebrow {
-		margin: 0 0 18px;
-		color: #d97706;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		font-size: 0.85rem;
-	}
+  .eyebrow {
+    margin: 0 0 18px;
+    color: #d97706;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
 
-	h1 {
-		margin: 0 0 24px;
-        font-weight: 500;
-		font-size: clamp(2.75rem, 5vw, 4.5rem);
-		line-height: 1.02;
-		letter-spacing: -0.04em;
-		color: #0f172a;
-	}
+  h1 {
+    margin: 0 0 24px;
+    font-weight: 500;
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: #0f172a;
+  }
 
-	.hero-copy p {
-        text-wrap: balance;
-		margin: 0 0 28px;
-		max-width: 560px;
-		line-height: 1.8;
-		color: #334155;
-		font-size: 1.05rem;
-	}
+  .hero-copy p {
+    text-wrap: balance;
+    margin: 0 0 28px;
+    max-width: 560px;
+    line-height: 1.8;
+    color: #334155;
+    font-size: 1.05rem;
+  }
 
-	.hero-actions {
-		display: flex;
-		align-items: center;
-		gap: 18px;
-		flex-wrap: wrap;
-	}
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
 
-	.button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 16px 26px;
-		border-radius: 999px;
-		font-weight: 700;
-		text-decoration: none;
-		transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-	}
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
 
-	.button:hover,
-	.button:focus-visible {
-		transform: translateY(-1px);
-	}
+  .button:hover,
+  .button:focus-visible {
+    transform: translateY(-1px);
+  }
 
-	.primary {
-		background: var(--brand-cta);
-		color: #ffffff;
-	}
+  .primary {
+    background: var(--brand-cta);
+    color: #ffffff;
+  }
 
-	.secondary {
-		background: #ffffff;
-		border: 1px solid rgba(15, 23, 42, 0.12);
-		color: #0f172a;
-	}
+  .secondary {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    color: #0f172a;
+  }
 
-	.hero-visual img {
-		width: 100%;
-		height: auto;
-		border-radius: 32px;
-		box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
-	}
+  .hero-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
+  }
 
-	@media screen and (max-width: 980px) {
-		.hero {
-			grid-template-columns: 1fr;
-			padding: 48px 0;
-		}
+  @media screen and (max-width: 980px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
 
-		.hero-actions {
-			justify-content: flex-start;
-		}
-	}
+    .hero-actions {
+      justify-content: flex-start;
+    }
+  }
 
-	@media screen and (max-width: 640px) {
-		.hero {
-			gap: 32px;
-		}
+  @media screen and (max-width: 640px) {
+    .hero {
+      gap: 32px;
+    }
 
-		.hero-copy p {
-			font-size: 1rem;
-		}
-	}
+    .hero-copy p {
+      font-size: 1rem;
+    }
+  }
 </style>

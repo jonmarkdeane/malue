@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+export interface Props {
+  name: string;
+  role: string;
+  bio: string;
+  imageSrc: any;
+  imageAlt?: string;
+}
+
+const {
+  name,
+  role,
+  bio,
+  imageSrc,
+  imageAlt = `Portrait of ${name}`,
+} = Astro.props as Props;
+---
+
+<article class="team-card">
+  <div class="photo-wrap">
+    <Image src={imageSrc} alt={imageAlt} />
+  </div>
+  <div class="card-copy">
+    <h3>{name}</h3>
+    <p class="role">{role}</p>
+    <p class="biog">{bio}</p>
+  </div>
+</article>
+
+<style>
+  .team-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    gap: 20px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .photo-wrap {
+    overflow: hidden;
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f8fafc;
+  }
+
+  .photo-wrap img,
+  .photo-wrap picture,
+  .photo-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .role {
+    margin: 0 0 8px;
+    color: #d97706;
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 1.3rem;
+    line-height: 1.15;
+  }
+
+  .biog {
+    margin: 0;
+    line-height: 1.4;
+  }
+</style>

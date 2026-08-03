@@ -4,6 +4,7 @@
 
 :root {
   --off-white: #fafafa;
+  --off-grey: #ededed;
   --dark-bg: #252525;
   --text-primary: #0f172a;
   --brand-secondary: #334155;
@@ -31,12 +32,36 @@ body {
 
 main,
 header {
-  padding: 0 20px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+}
 
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 80px 20px;
+  margin: 0 auto;
+}
+
+  @media screen and (max-width: 980px) {
+    .wrapper {
+      padding: 40px 20px;
+    }
+  }
+
+.wrapper:nth-child(even) {
+  background: var(--off-grey);
+}
+
+.wrapper:nth-child(odd) {
   background: var(--off-white);
 }
-.wrapper {
-  width: min(100%, var(--site-max-width));
+
+section {
+  position: relative;
+  max-width: var(--site-max-width);
   margin: 0 auto;
 }
 

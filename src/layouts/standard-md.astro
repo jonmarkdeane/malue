@@ -3,6 +3,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Head from "@components/Head.astro";
 import ContactBug from "@components/ContactBug.astro";
+const { frontmatter } = Astro.props
 import "@styles/global.css";
 ---
 
@@ -12,7 +13,11 @@ import "@styles/global.css";
   <body>
     <Header />
     <main>
-        <slot />
+      <div class="wrapper">
+        <section class="content">
+          <slot />
+        </section>
+        </div>
     </main>
 
     <Footer />
