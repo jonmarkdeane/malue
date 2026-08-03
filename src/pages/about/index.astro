@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import heroImage from '@assets/heroes/malue-home-hero.png';
+---
+
+<Layout>
+	<Hero
+    eyebrow="About Malue"
+		titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
+		description="Making every penny count means helping healthcare adopt what works"
+		// primaryText="Partner With Us"
+		// primaryHref="/partner"
+		// secondaryText="Learn More"
+		// secondaryHref="/about" -->
+		imageAlt="Hero image"
+		imageSrc={heroImage}
+	/>
+</Layout>

@@ -1,5 +1,7 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
+
 ---
 
 <head>
@@ -11,4 +13,6 @@ import { Font } from "astro:assets";
   <Font cssVariable="--font-inter" />
   <meta name="generator" content={Astro.generator} />
   <title>malue</title>
+  <ClientRouter />
+
 </head>

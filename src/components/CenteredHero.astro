@@ -1,19 +1,22 @@
 ---
 import heroImage from '../assets/background.svg';
+import { Image } from 'astro:assets';
 
 export interface Props {
 	title?: string;
+	titleHtml?: string;
 	description?: string;
 	primaryText?: string;
 	primaryHref?: string;
 	secondaryText?: string;
 	secondaryHref?: string;
 	imageAlt?: string;
-	imageSrc?: string;
+	imageSrc?: any;
 }
 
 const {
 	title = 'Partner with Malue to unlock better value and growth.',
+	titleHtml,
 	description = 'We design strategic collaborations, launch new products, and create stronger customer experiences across every channel. Let’s build something exceptional together.',
 	primaryText = 'Partner With Us',
 	primaryHref = '#',
@@ -26,7 +29,7 @@ const {
 
 <section class="centered-hero">
 	<div class="hero-copy">
-		<h1>{title}</h1>
+		{titleHtml ? <h1 set:html={titleHtml} /> : <h1>{title}</h1>}
 		<p>{description}</p>
 		<div class="hero-actions">
 			<a href={primaryHref} class="button primary">{primaryText}</a>
@@ -35,7 +38,7 @@ const {
 	</div>
 
 	<div class="hero-visual">
-		<img src={imageSrc ?? heroImage.src} alt={imageAlt} />
+		<Image src={imageSrc ?? heroImage} alt={imageAlt} />
 	</div>
 </section>
 
@@ -43,20 +46,19 @@ const {
 	.centered-hero {
 		display: grid;
 		place-items: center;
-		padding: 40px 20px;
+		padding: 40px 0;
 		text-align: center;
-		gap: 50px;
+		gap: 40px;
 	}
 
 	.hero-copy {
-		max-width: 720px;
 	}
 
 
 
 	h1 {
 		margin: 0 0 24px;
-        max-width: 920px;
+        /* max-width: 920px; */
         font-weight: 500;
         text-wrap: balance;
 		font-size: clamp(2.75rem, 5vw, 4.5rem);
@@ -66,12 +68,14 @@ const {
 	}
 
 	.hero-copy p {
-		margin: 0 auto 32px;
-		max-width: 600px;
+		margin: 0 auto 25px;
+		max-width: calc(var(--site-max-width) - 300px);
 		line-height: 1.8;
 		color: #334155;
 		font-size: 1.05rem;
 	}
+
+
 
 	.hero-actions {
 		display: flex;
@@ -109,17 +113,16 @@ const {
 	}
 
 	.hero-visual img {
-		width: min(100%, var(--site-max-width));
+        width: 100%;
         aspect-ratio: 2.3 / 1;
         object-fit: cover;
 		height: auto;
-		border-radius: 32px;
+		border-radius: 25px;
 		box-shadow: 0 28px 80px rgba(15, 23, 42, 0.12);
 	}
 
 	@media screen and (max-width: 640px) {
 		.centered-hero {
-			padding: 40px 20px;
             gap: 30px;
 		}
 

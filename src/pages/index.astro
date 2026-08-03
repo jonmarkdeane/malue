@@ -1,18 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CenteredHero from '../components/CenteredHero.astro';
-import heroImage from '../assets/malue-home-hero.png';
+import Layout from '@layouts/Layout.astro';
+import CenteredHero from '@components/CenteredHero.astro';
+import heroImage from '@assets/heroes/malue-home-hero.png';
 ---
 
 <Layout>
 	<CenteredHero
-		title="Helping healthcare adopt what works"
+		titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
 		description="Malue is building an incentivised decision intelligence platform for healthcare and regulated sectors. Designed to help organisations capture frontline experience, structure evidence and support the adoption of better ways of working."
 		primaryText="Partner With Us"
 		primaryHref="/partner"
 		secondaryText="Learn More"
 		secondaryHref="/about"
 		imageAlt="Illustration of growth and collaboration"
-		imageSrc={heroImage.src}
+		imageSrc={heroImage}
 	/>
 </Layout>
