@@ -4,6 +4,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://jonmarkdeane.github.io',
+  base: '/malue',
     build: {
     assetsPrefix: './',
   },
