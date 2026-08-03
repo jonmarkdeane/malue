@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,5 +7,9 @@ export default defineConfig({
     build: {
     assetsPrefix: './',
   },
-  base: './malue'
+    fonts: [{
+    provider: fontProviders.fontsource(),
+    name: "Inter",
+    cssVariable: "--font-inter",
+  }]
 })

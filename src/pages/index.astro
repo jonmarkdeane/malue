@@ -1,11 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CenteredHero from '../components/CenteredHero.astro';
+import heroImage from '../assets/malue-home-hero.png';
 ---
 
 <Layout>
-	<Welcome />
+	<CenteredHero
+		title="Helping healthcare adopt what works"
+		description="Malue is building an incentivised decision intelligence platform for healthcare and regulated sectors. Designed to help organisations capture frontline experience, structure evidence and support the adoption of better ways of working."
+		primaryText="Partner With Us"
+		primaryHref="/partner"
+		secondaryText="Learn More"
+		secondaryHref="/about"
+		imageAlt="Illustration of growth and collaboration"
+		imageSrc={heroImage.src}
+	/>
 </Layout>
