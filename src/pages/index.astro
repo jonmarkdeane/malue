@@ -1,18 +1,64 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import CenteredHero from '@components/CenteredHero.astro';
-import heroImage from '@assets/heroes/malue-home-hero.png';
+import Layout from "@layouts/Layout.astro";
+import CenteredHero from "@components/CenteredHero.astro";
+import SimpleBlock from "@components/SimpleBlock.astro";
+import heroImage from "@assets/heroes/malue-home-hero.png";
 ---
 
 <Layout>
-	<CenteredHero
-		titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
-		description="Malue is building an incentivised decision intelligence platform for healthcare and regulated sectors. Designed to help organisations capture frontline experience, structure evidence and support the adoption of better ways of working."
-		primaryText="Partner With Us"
-		primaryHref="/partner"
-		secondaryText="Learn More"
-		secondaryHref="/about"
-		imageAlt="Illustration of growth and collaboration"
-		imageSrc={heroImage}
-	/>
+  <CenteredHero
+    titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
+    description="Malue is building an incentivised decision intelligence platform for healthcare and regulated sectors. Designed to help organisations capture frontline experience, structure evidence and support the adoption of better ways of working."
+    primaryText="Partner With Us"
+    primaryHref="/partner"
+    secondaryText="Learn More"
+    secondaryHref="/about"
+    imageAlt="Illustration of growth and collaboration"
+    imageSrc={heroImage}
+  />
+
+  <SimpleBlock title="From promising idea to measurable improvement">
+    <p>
+      Malue helps healthcare teams explore, test and adopt changes that improve
+      services. Our work has supported major equipment procurement, real-time
+      professional engagement, sustainable clinical alternatives and new
+      workforce models.
+    </p>
+    <p>
+      Each collaboration addresses a practical partner need while strengthening
+      a reusable improvement capability, bringing together stakeholder insight,
+      evidence, governance, implementation planning and impact measurement in
+      one place.
+    </p>
+  </SimpleBlock>
+
+  <SimpleBlock title="The Malue loop">
+    <p>
+      A connected platform loop that moves improvement from insight through to
+      measurable, adopted value.
+    </p>
+    <p>LOOP GRAPHIC HERE</p>
+    <p>
+      The answers to many healthcare operational challenges already exist within
+      the system. Clinicians see what fits workflow. Procurement teams
+      understand decision risk. Patients experience the consequences of service
+      design. Industry partners see where products can help. Operational leaders
+      understand the pressure on cost, capacity and performance.
+    </p>
+  </SimpleBlock>
+
+  <SimpleBlock title="How we work">
+    <p>
+      Malue works alongside healthcare organisations, departments and teams to
+      turn promising ideas into evidence-led, adoptable improvements.
+    </p>
+    <p>
+      Each initiative helps our partners address an immediate challenge while
+      also strengthening the reusable tools, workflows and insights available
+      through the Malue platform. This means practical work in areas such as
+      engagement, implementation, sustainability and service redesign
+      contributes to a broader capability for managing change, from
+      understanding the problem through to adoption and impact measurement.
+    </p>
+  </SimpleBlock>
 </Layout>

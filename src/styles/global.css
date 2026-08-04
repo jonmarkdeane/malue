@@ -10,6 +10,8 @@
   --brand-secondary: #334155;
   --brand-accent: #245ca6;
   --brand-cta: #f29966;
+  --brand-dark: #310E0E;
+  --delivered: #59C500;
   --site-max-width: 1280px;
 }
 *,
@@ -65,7 +67,16 @@ section {
   margin: 0 auto;
 }
 
+
+  h2 {
+    text-wrap: balance;
+    margin: 0 0 18px;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.05;
+  }
+
 .highlight {
   color: var(--brand-accent);
   font-weight: 600;
 }
+

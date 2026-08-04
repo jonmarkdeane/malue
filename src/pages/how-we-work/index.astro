@@ -1,15 +1,124 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Hero from '@components/Hero.astro';
-import heroImage from '@assets/heroes/malue-home-hero.png';
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import ServiceGrid from "@components/ServiceGrid.astro";
+import ExampleGrid from "@components/ExampleGrid.astro";
+import heroImage from "@assets/heroes/malue-how-hero.png";
+import healthcareImage from "@assets/hospital-building.png";
+import healthcareProfessionalImage from "@assets/stethoscope.png";
+import healthcareIndustryImage from "@assets/eco-factory.png";
+import investorImage from "@assets/growth.png";
 ---
 
 <Layout>
   <Hero
     eyebrow="How we work"
-    titleHtml="Designing healthcare solutions that fit how teams work"
-    description="We combine strategy, data, and systems thinking to make change stick in healthcare organizations."
+    titleHtml="Loreum ipsum odor sit amet"
+    description="Malue works alongside healthcare organisations, departments and teams to turn promising ideas into evidence-led, adoptable improvements."
     imageAlt="Healthcare work illustration"
     imageSrc={heroImage}
   />
+
+  <ServiceGrid
+    services={[
+      {
+        title: "Healthcare providers",
+        description:
+          "Reduce waste, improve decision confidence, support adoption and scale what works",
+        imageSrc: healthcareImage,
+        imageAlt: "Healthcare provider illustration",
+      },
+      {
+        title: "Healthcare professionals",
+        description:
+          "Surface practical insight, develop ideas, support adoption and gain recognition for contribution",
+        imageSrc: healthcareProfessionalImage,
+        imageAlt: "Healthcare professional illustration",
+      },
+      {
+        title: "Healthcare industry",
+        description:
+          "Generate real-world evidence, understand adoption barriers and support product uptake",
+        imageSrc: healthcareIndustryImage,
+        imageAlt: "Healthcare industry illustration",
+      },
+      {
+        title: "Investors & strategic partners",
+        description:
+          "Engage with a validated, mission-led platform business positioned at the intersection of healthcare efficiency, adoption support, decision intelligence, impact data and incentivised improvement",
+        imageSrc: investorImage,
+        imageAlt: "Investor illustration",
+      },
+    ]}
+  />
+
+  <ExampleGrid
+    examples={[
+      {
+        status: "Delivered",
+        title: "Supporting better procurement decisions",
+        subheading: "Anaesthetic equipment renewal",
+        markdown: true,
+        description: `We supported a large-scale procurement programme involving 53 anaesthetic machines, representing an investment of approximately £1.6 million.
+Structured engagement helped the organisation understand clinicians’ product preferences, concerns about proposed changes and difficulties experienced with existing equipment. This provided decision-makers with richer evidence to support product evaluation, procurement and implementation planning.
+The project also informed Malue’s capabilities for:
+- Designing structured questions and engagement activities
+Identifying recurring themes, concerns and areas of resistance
+- Analysing sentiment and issues within qualitative feedback
+- Presenting findings clearly to decision-makers
+- Building staff insight into procurement and adoption decisions`,
+      },
+      {
+        status: "Delivered",
+        title: "Capturing real-time professional insight",
+        subheading: "Association of Surgeons of Great Britain and Ireland",
+        markdown: true,
+        description: `Malue supported the collection of real-time feedback on initiatives presented to surgical professionals at an annual conference.
+Participants could respond as initiatives were introduced, enabling organisers to see aggregated views and explore how opinions developed through continued engagement. This created a faster and more interactive way to understand which proposals resonated with the professional community and where further work was required.
+The collaboration has helped develop Malue’s capabilities for:
+- Rapidly creating and administering engagement activities
+- Automated participant onboarding
+- User self-management
+- Real-time aggregation and reporting
+- Iterative engagement as ideas and evidence develop
+-   Identifying initiatives with the strongest potential for adoption`,
+      },
+      {
+        status: "In Progress",
+        title: "Turning sustainable alternatives into routine practice",
+        subheading: "CoolStick adoption",
+        markdown: true,
+        description:
+`We are supporting the adoption of CoolStick as an alternative to ethyl chloride spray, with the aim of reducing the environmental impact associated with current practice.
+The work goes beyond identifying a more sustainable product. It considers how the alternative fits into clinical workflows, how staff and patients respond to the change, what practical barriers may affect implementation, and what evidence is needed to support wider adoption.
+This project demonstrates how Malue can support:
+- Sustainability-led improvement
+- Stakeholder and workflow analysis 
+- Staff and patient feedback 
+- Identification of implementation barriers 
+- Pilot design and adoption planning 
+- Measurement of environmental, operational and user benefits 
+- Development of reusable evidence for wider adoption`
+      },
+      {
+        status: "In Development",
+        title: "Enabling workforce and service redesign",
+        subheading: "Remimazolam-enabled cardioversion pathway",
+        markdown: true,
+        description:
+`We are exploring how the introduction of remimazolam could support a redesigned pathway for DC cardioversion, including the potential for appropriately trained nurses to undertake roles traditionally requiring consultant anaesthetist involvement, subject to local governance, clinical evidence and professional approval.
+Malue supports the team in examining the change as a complete service model rather than simply the introduction of a medicine. This includes the clinical pathway, workforce requirements, training, governance, stakeholder confidence, operational impact and evidence required for safe implementation.
+The work illustrates Malue’s capabilities for:
+- Mapping current and proposed clinical pathways
+- Assessing workforce and service-delivery implications
+- Identifying clinical, regulatory and governance requirements
+- Engaging affected professional groups
+- Supporting pilot and implementation planning
+- Developing the operational and financial case for change
+- Measuring safety, capacity, efficiency, financial and patient impact`
+    },
+    ]}
+  />
 </Layout>
+
+<style></style>

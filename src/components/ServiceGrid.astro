@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+export interface ServiceItem {
+  title: string;
+  description: string;
+  imageSrc: any;
+  imageAlt: string;
+}
+
+export interface Props {
+  services: ServiceItem[];
+  heading?: string;
+}
+
+const { services = [], heading = "Who Malue supports" } = Astro.props as Props;
+---
+
+<div class="wrapper">
+  <section class="who-we-help">
+    <div class="section-copy">
+      <h2>{heading}</h2>
+    </div>
+
+    <div class="service-grid">
+      {
+        services.map((service) => (
+          <article class="service-card">
+            <div class="photo-wrap">
+              <Image src={service.imageSrc} alt={service.imageAlt} />
+            </div>
+            <div class="card-copy">
+              <h3>{service.title}</h3>
+              <p class="biog">{service.description}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  .who-we-help {
+    display: grid;
+    gap: 40px;
+
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+  }
+
+  .photo-wrap {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f8fafc;
+    display: grid;
+    place-items: center;
+  }
+
+  .photo-wrap img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .card-copy {
+    padding: 24px;
+  }
+
+  .card-copy h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+  }
+
+  .biog {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+  @media screen and (max-width: 1120px) {
+    .service-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

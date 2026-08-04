@@ -1,0 +1,173 @@
+---
+import { marked } from "marked";
+
+export interface ExampleItem {
+  status: string;
+  title: string;
+  subheading?: string;
+  description: string;
+  markdown?: boolean;
+  renderedHtml?: string;
+}
+
+export interface Props {
+  examples: ExampleItem[];
+  heading?: string;
+}
+
+const { examples = [], heading = "Who Malue supports" } = Astro.props as Props;
+
+const processedExamples: ExampleItem[] = examples.map((ex) => {
+  if (ex.markdown) {
+    const mdHtml = String(marked.parse(ex.description));
+    return { ...ex, renderedHtml: mdHtml };
+  }
+  return ex;
+});
+
+const statusClass = (status: string) =>
+  status
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+---
+
+<div class="wrapper">
+  <section class="who-we-help">
+    <div class="section-copy">
+      <h2>{heading}</h2>
+    </div>
+
+    <div class="example-grid">
+      {
+        processedExamples.map((example) => (
+          <article class="example-card">
+            <div class="card-copy">
+              <p class={`status ${statusClass(example.status)}`}>{example.status}</p>
+              <h3>{example.title}</h3>
+              {example.subheading ? (
+                <p class="subheading">{example.subheading}</p>
+              ) : null}
+              {example.markdown && example.renderedHtml ? (
+                <div
+                  class="example-description"
+                  set:html={example.renderedHtml}
+                />
+              ) : null}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  .who-we-help {
+    display: grid;
+    gap: 40px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+    .status {
+    margin: 0 0 14px;
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  .status.delivered {
+    color: var(--delivered);
+  }
+
+  .status.in-progress {
+    color: var(--brand-accent);
+  }
+
+  .status.in-development {
+    color: var(--brand-dark);
+  }
+  .example-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: left;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  }
+
+  .photo-wrap {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #f8fafc;
+    display: grid;
+    place-items: center;
+  }
+
+  .photo-wrap img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .card-copy {
+    padding: 24px;
+  }
+
+  .card-copy h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+  }
+
+  .subheading {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #64748b;
+    font-weight: 700;
+  }
+
+  .example-description {
+    margin: 0;
+    line-height: 1.75;
+  }
+
+ 
+
+  @media screen and (max-width: 620px) {
+    .example-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<style is:global>
+/* Global styles for markdown content inside example-description */
+
+  .example-description {
+    margin: 0 0 12px;
+    line-height: 1.2;
+    color: #475569;
+    font-size: 1rem;
+  }
+
+.example-description ul {
+    padding:  0 0 0 20px;
+  }
+
+</style>
