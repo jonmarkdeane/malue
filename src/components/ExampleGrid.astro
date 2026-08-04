@@ -15,7 +15,7 @@ export interface Props {
   heading?: string;
 }
 
-const { examples = [], heading = "Who Malue supports" } = Astro.props as Props;
+const { examples = [], heading = "In the real world" } = Astro.props as Props;
 
 const processedExamples: ExampleItem[] = examples.map((ex) => {
   if (ex.markdown) {

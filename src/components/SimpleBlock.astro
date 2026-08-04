@@ -1,15 +1,15 @@
 ---
 export interface Props {
-  title: string;
+  titleHtml: string;
 }
 
-const { title } = Astro.props as Props;
+const { titleHtml } = Astro.props as Props;
 ---
 
 <div class="wrapper">
   <section class="simple-block">
     <div class="block-copy">
-      <h2>{title}</h2>
+      <h2 set:html={titleHtml} />
       <slot />
     </div>
   </section>
