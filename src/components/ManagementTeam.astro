@@ -11,17 +11,22 @@ export interface Member {
 export interface Props {
   eyebrow?: string;
   title?: string;
+  titleHtml?: string;
   description?: string;
   members: Member[];
 }
 
-const { title = "Our leadership team", members = [] } = Astro.props as Props;
+const {
+  title = "Our leadership team",
+  titleHtml,
+  members = [],
+} = Astro.props as Props;
 ---
 
 <div class="wrapper">
   <section class="management-team">
     <div class="section-copy">
-      <h2>{title}</h2>
+      {titleHtml ? <h2 set:html={titleHtml} /> : <h2>{title}</h2>}
     </div>
 
     <div class="team-grid">

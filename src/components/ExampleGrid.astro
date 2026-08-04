@@ -13,9 +13,14 @@ export interface ExampleItem {
 export interface Props {
   examples: ExampleItem[];
   heading?: string;
+  headingHtml?: string;
 }
 
-const { examples = [], heading = "In the real world" } = Astro.props as Props;
+const {
+  examples = [],
+  heading = "In the real world",
+  headingHtml,
+} = Astro.props as Props;
 
 const processedExamples: ExampleItem[] = examples.map((ex) => {
   if (ex.markdown) {
@@ -36,7 +41,7 @@ const statusClass = (status: string) =>
 <div class="wrapper">
   <section class="who-we-help">
     <div class="section-copy">
-      <h2>{heading}</h2>
+      {headingHtml ? <h2 set:html={headingHtml} /> : <h2>{heading}</h2>}
     </div>
 
     <div class="example-grid">

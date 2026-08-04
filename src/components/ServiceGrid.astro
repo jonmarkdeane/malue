@@ -10,15 +10,20 @@ export interface ServiceItem {
 export interface Props {
   services: ServiceItem[];
   heading?: string;
+  headingHtml?: string;
 }
 
-const { services = [], heading = "Who Malue supports" } = Astro.props as Props;
+const {
+  services = [],
+  heading = "Who Malue supports",
+  headingHtml,
+} = Astro.props as Props;
 ---
 
 <div class="wrapper">
   <section class="who-we-help">
     <div class="section-copy">
-      <h2>{heading}</h2>
+      {headingHtml ? <h2 set:html={headingHtml} /> : <h2>{heading}</h2>}
     </div>
 
     <div class="service-grid">
