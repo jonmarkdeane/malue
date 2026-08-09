@@ -1,50 +1,65 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Hero from '@components/Hero.astro';
-import ManagementTeam from '@components/ManagementTeam.astro';
-import heroImage from '@assets/heroes/malue-home-hero.png';
-import photoA from '@assets/bloke.png';
-import photoB from '@assets/bloke.png';
-import photoC from '@assets/bloke.png';
-import photoD from '@assets/bloke.png';
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import ManagementTeam from "@components/ManagementTeam.astro";
+import heroImage from "@assets/heroes/malue-home-hero.png";
+import photoA from "@assets/bloke.png";
+import photoB from "@assets/bloke.png";
+import photoC from "@assets/bloke.png";
+import photoD from "@assets/bloke.png";
+import StandardBlock from "@components/StandardBlock.astro";
 ---
 
 <Layout>
-	<Hero
+  <Hero
     eyebrow="About Malue"
-		titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
-		description="Making every penny count means helping healthcare adopt what works"
-		imageAlt="Hero image"
-		imageSrc={heroImage}
-	/>
+    titleHtml="Helping healthcare <span class='highlight'>adopt</span> what works"
+    description="Making every penny count means helping healthcare adopt what works"
+    imageAlt="Hero image"
+    imageSrc={heroImage}
+  />
 
-	<ManagementTeam
-	  titleHtml="Our <span class='highlight'>management team</span>"
-	  members={[
-	    {
-	      name: 'Nick Cunningham-Moorat',
-	      role: 'Chief Executive Officer',
-	      bio: 'Commercial leader and serial entrepreneur with experience across corporate leadership, financial services, fintech, manufacturing and technology-led business creation.',
-	      imageSrc: photoA,
-	    },
-	    {
-	      name: 'Jim Deane',
-	      role: 'Chief Technology Officer',
-	      bio: 'Technology leader with extensive experience delivering complex IT solutions across financial services and other regulated markets.',
-	      imageSrc: photoB,
-	    },
-	    {
-	      name: 'Matt Silver-Vallance',
-	      role: 'Chief Business Development Officer',
-	      bio: 'Healthcare industry specialist with deep commercial experience, focused on partnerships, adoption and market development.',
-	      imageSrc: photoC,
-	    },
-	    {
-	      name: 'Simon Withey',
-	      role: 'Domain Expert',
-	      bio: 'Consultant plastic and reconstructive surgeon with long-standing commitment to healthcare improvement, clinical standards and value.',
-	      imageSrc: photoD,
-	    },
-	  ]}
-	/>
+  <StandardBlock
+  alignText="left"
+alignBody="left"
+    textMarkdown=`## Why **Malue** exists
+Healthcare does not lack intelligence. It often lacks the infrastructure to capture that intelligence, structure it, compare it, act on it and scale it. Healthcare professionals know where waste happens. Patients experience the consequences of design decisions. Procurement teams understand the difficulty of complex choices. Industry partners often know where innovation can help, but need credible real-world evidence to support adoption.  
+Malue is being built to bring these perspectives together and help healthcare systems make better decisions and adopt better ways of working.  
+### From waste to adoption
+Malue began with a focus on operational waste in healthcare. That focus quickly revealed a deeper challenge: even when better ideas, products or practices exist, healthcare systems often struggle to adopt them. The problem is not only innovation. It is adoption. Malue's platform has therefore been designed to support the movement from insight to implementation, and from implementation to measurable impact.
+### Built through research and validation
+Malue's development has been shaped by years of research, stakeholder engagement and functional validation across broad healthcare themes including product and service evaluation, procurement decision support, professional engagement, sustainability, post-market feedback, pathway adoption, operational improvement, contribution recognition and innovation adoption. This work has moved Malue beyond concept and into a validated pre-market stage.
+### A mission-led commercial model
+Malue is designed to create commercial value and social value together. The company purpose is to help healthcare systems use resources more intelligently, improve adoption of valuable innovation, reduce waste, support sustainability and recognise the people whose work creates improvement. As Malue matures commercially, the company aims to reinvest a portion of value into healthcare improvement activity aligned with its mission.`
+  />
+
+  <ManagementTeam
+    titleHtml="Our <span class='highlight'>management team</span>"
+    members={[
+      {
+        name: "Nick Cunningham-Moorat",
+        role: "Chief Executive Officer",
+        bio: "Commercial leader and serial entrepreneur with experience across corporate leadership, financial services, fintech, manufacturing and technology-led business creation.",
+        imageSrc: photoA,
+      },
+      {
+        name: "Jim Deane",
+        role: "Chief Technology Officer",
+        bio: "Technology leader with extensive experience delivering complex IT solutions across financial services and other regulated markets.",
+        imageSrc: photoB,
+      },
+      {
+        name: "Matt Silver-Vallance",
+        role: "Chief Business Development Officer",
+        bio: "Healthcare industry specialist with deep commercial experience, focused on partnerships, adoption and market development.",
+        imageSrc: photoC,
+      },
+      {
+        name: "Simon Withey",
+        role: "Domain Expert",
+        bio: "Consultant plastic and reconstructive surgeon with long-standing commitment to healthcare improvement, clinical standards and value.",
+        imageSrc: photoD,
+      },
+    ]}
+  />
 </Layout>

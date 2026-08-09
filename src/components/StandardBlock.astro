@@ -1,0 +1,99 @@
+---
+import { marked } from "marked";
+import { Image } from "astro:assets";
+import Button from "@components/Button.astro";
+import pholder from "@assets/background.svg";
+
+export interface Props {
+  alignBody?: string;
+  alignText?: string;
+  textMarkdown: string;
+  imageSrc?: any;
+  imageAlt?: string;
+  linkText?: string;
+  linkURL?: string;
+}
+
+const {
+  textMarkdown,
+  alignBody = "left",
+  alignText = "left",
+  imageAlt = "Image alt text",
+  imageSrc,
+  linkText,
+  linkURL,
+} = Astro.props as Props;
+---
+
+<div class="wrapper">
+  <section class={`standard-block alignbody-${alignBody}`}>
+    <div class={`block-copy aligntext-${alignText}`}>
+      <div class="block-text" set:html={String(marked.parse(textMarkdown))} />
+      {
+        linkText && (
+          <div class="block-link">
+            <Button href={linkURL} appearance="primary">
+              {linkText}
+            </Button>
+          </div>
+        )
+      }
+    </div>
+    {
+      imageSrc && (
+        <div class="block-visual">
+          <Image src={imageSrc ?? pholder} alt={imageAlt} />
+        </div>
+      )
+    }
+  </section>
+</div>
+
+<style>
+  .standard-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .standard-block.alignbody-left {
+    flex-direction: row;
+  }
+
+  .standard-block.alignbody-right {
+    flex-direction: row-reverse;
+  }
+
+  .standard-block.alignbody-center {
+    flex-direction: column;
+  }
+
+  .standard-block > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .block-visual {
+    min-width: 40%;
+  }
+  .block-visual img {
+    background: gainsboro;
+
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 640px) {
+    .standard-block {
+      display: grid;
+      gap: 20px;
+    }
+
+    .aligntext-left,
+    .aligntext-right, .aligntext-center {
+text-align: left;
+    }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import heroImage from "@assets/background.svg";
+import Button from "@components/Button.astro";
 
 export interface Props {
   eyebrow?: string;
@@ -20,10 +21,10 @@ const {
   title = "Partner with Malue to unlock better value and growth.",
   titleHtml,
   description = "We design strategic collaborations, launch new products, and create stronger customer experiences across every channel. Let’s build something exceptional together.",
-  // primaryText = 'Partner With Us',
-  // primaryHref = '#',
-  // secondaryText = 'Learn More',
-  // secondaryHref = '#',
+  primaryText = "Partner With Us",
+  primaryHref = "#",
+  secondaryText = "Learn More",
+  secondaryHref = "#",
   imageAlt = "Illustration of growth and collaboration",
   imageSrc,
 } = Astro.props as Props;
@@ -35,10 +36,10 @@ const {
       <p class="eyebrow">{eyebrow}</p>
       {titleHtml ? <h1 set:html={titleHtml} /> : <h1>{title}</h1>}
       <p>{description}</p>
-      <!-- <div class="hero-actions">
-			<a href="#" class="button primary">Partner With Us</a>
-			<a href="#" class="button secondary">Learn More</a>
-		</div> -->
+      <div class="hero-actions">
+        <Button href={primaryHref ?? "#"} appearance="primary">{primaryText ?? "Partner With Us"}</Button>
+        <Button href={secondaryHref ?? "#"} appearance="secondary">{secondaryText ?? "Learn More"}</Button>
+      </div>
     </div>
 
     <div class="hero-visual">
@@ -91,36 +92,6 @@ const {
     align-items: center;
     gap: 18px;
     flex-wrap: wrap;
-  }
-
-  .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 26px;
-    border-radius: 999px;
-    font-weight: 700;
-    text-decoration: none;
-    transition:
-      transform 0.2s ease,
-      background-color 0.2s ease,
-      color 0.2s ease;
-  }
-
-  .button:hover,
-  .button:focus-visible {
-    transform: translateY(-1px);
-  }
-
-  .primary {
-    background: var(--brand-cta);
-    color: #ffffff;
-  }
-
-  .secondary {
-    background: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    color: #0f172a;
   }
 
   .hero-visual img {
