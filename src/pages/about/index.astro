@@ -7,6 +7,7 @@ import photoA from "@assets/bloke.png";
 import photoB from "@assets/bloke.png";
 import photoC from "@assets/bloke.png";
 import photoD from "@assets/bloke.png";
+import pholder from "@assets/background.svg"
 import StandardBlock from "@components/StandardBlock.astro";
 ---
 
@@ -21,7 +22,9 @@ import StandardBlock from "@components/StandardBlock.astro";
 
   <StandardBlock
   alignText="left"
-alignBody="left"
+alignBody="right"
+imageAlt="Image"
+imageSrc={pholder}
     textMarkdown=`## Why **Malue** exists
 Healthcare does not lack intelligence. It often lacks the infrastructure to capture that intelligence, structure it, compare it, act on it and scale it. Healthcare professionals know where waste happens. Patients experience the consequences of design decisions. Procurement teams understand the difficulty of complex choices. Industry partners often know where innovation can help, but need credible real-world evidence to support adoption.  
 Malue is being built to bring these perspectives together and help healthcare systems make better decisions and adopt better ways of working.  
