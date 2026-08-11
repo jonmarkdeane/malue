@@ -1,0 +1,84 @@
+---
+export interface SimpleItem {
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  sectionID?: string;
+  items?: SimpleItem[];
+  heading?: string;
+  headingHtml?: string;
+}
+
+const {
+  sectionID = "simple-grid",
+  items = [],
+  heading = "What we do",
+  headingHtml,
+} = Astro.props as Props;
+---
+
+<div id={sectionID} class="wrapper">
+  <section class="simple-grid-section">
+    <div class="section-copy">
+      {headingHtml ? <h2 set:html={headingHtml} /> : <h2>{heading}</h2>}
+    </div>
+    <div class="simple-grid">
+      {
+        items.map((item) => (
+          <article class="simple-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  h2 {
+    text-align: center;
+  }
+  .simple-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .simple-card {
+    display: grid;
+    gap: 12px;
+    padding: 24px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
+  }
+
+  .simple-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+  }
+
+  .simple-card p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+    font-size: 0.98rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    .simple-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    .simple-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

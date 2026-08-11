@@ -1,7 +1,11 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Hero from '@components/Hero.astro';
-import heroImage from '@assets/heroes/malue-investors-hero.png';
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import heroImage from "@assets/heroes/malue-investors-hero.png";
+import StandardBlock from "@components/StandardBlock.astro";
+import SimpleGrid from "@components/SimpleGrid.astro";
+import pholder from "@assets/background.svg";
+import CTABlock from "@components/CTABlock.astro";
 ---
 
 <Layout>
@@ -11,5 +15,227 @@ import heroImage from '@assets/heroes/malue-investors-hero.png';
     description="Healthcare spends billions each year on innovation, digital transformation and operational improvement. Yet too many valuable ideas never move beyond local success because organisations struggle to capture frontline knowledge, evaluate opportunities consistently, implement change and measure impact."
     imageAlt="Investor strategy illustration"
     imageSrc={heroImage}
+    primaryHref="#"
+    primaryText="Request investor info"
+    secondaryHref="#"
+    secondaryText="Book a conversation"
+  />
+
+  <StandardBlock
+    sectionID="why-this-matters"
+    imageAlt="image"
+    imageSrc={pholder}
+    alignBody="right"
+    textMarkdown="## Why **this matters**  
+    
+Every hospital faces the same pressures:
+
+- Rising demand
+
+- Workforce shortages
+
+- Financial constraints
+
+- Increasing operational complexity
+
+- Growing expectations around sustainability and productivity
+
+Yet the challenge is rarely a lack of ideas.
+
+It is the ability to identify, evaluate, implement and scale improvements with confidence.
+
+This is the adoption gap.
+
+Healthcare doesn't simply need more innovation.
+
+It needs better infrastructure for operational improvement.
+
+This is consistent with the website strategy's focus on healthcare waste, fragmented experience data, adoption and operational decision-making."
+  />
+
+  <StandardBlock
+    sectionID="why-malue"
+    alignText="left"
+    alignBody="center"
+    textMarkdown="## Why **Malue**?  
+    
+Malue believes that healthcare already contains much of the knowledge required to improve.
+
+Clinicians. Operational teams. Patients. Industry. Procurement. Quality teams.
+
+Every day they generate valuable insight.
+
+Very little of that knowledge becomes structured evidence.
+
+Even less becomes adopted improvement.
+
+Malue connects those stages into one continuous journey. (add in the Malue loop graphic here)
+
+Capture. Evaluate. Implement. Measure. Scale."
+  />
+
+  <StandardBlock
+    sectionID="our-platform"
+    alignText="left"
+    alignBody="center"
+    textMarkdown="## Our **platform**  
+
+  ### DIAGRAM HERE
+
+Every pathway contributes towards better operational performance.
+
+- Complaints
+
+- Operational friction
+
+- Product evaluations
+
+- Improvement ideas
+
+- Incomplete initiatives"
+  />
+
+  <StandardBlock
+    sectionID="why-this-is-different"
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## Why this is **different**  
+  
+Most healthcare technology addresses individual problems. Malue is building infrastructure. 
+
+It isn't simply another: 
+
+- Idea management platform  
+- Project management system  
+- Evaluation tool  
+- Knowledge repository  
+- Complaints platform  
+
+It connects all of those into one operational improvement ecosystem. "
+  />
+
+  <StandardBlock
+    sectionID="why-now"
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## Why **now**?
+
+Healthcare has entered a period where organisations are expected to achieve more with constrained resources. 
+
+Across healthcare there is increasing emphasis on: 
+
+- Productivity  
+- Adoption of innovation  
+- Evidence-based decision making  
+- Operational efficiency  
+- Sustainability  
+- Workforce engagement  
+
+Organisations need better ways to capture knowledge and turn it into measurable improvement. 
+
+Malue has been designed to support that transition."
+  />
+
+  <StandardBlock
+    sectionID="built-through-verification"
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## Built through **verification**  
+
+Malue has evolved through extensive research, stakeholder engagement, proof-of-concept development and functional validation across multiple healthcare themes. 
+
+This work has informed both the platform architecture and the improvement pathways that underpin the MVP. 
+
+Today the company is focused on delivering the MVP and its first commercial deployments. "
+  />
+
+  <StandardBlock
+    sectionID="the-opportunity"
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## The **opportunity**  
+
+Healthcare organisations continue to invest heavily in: 
+
+- Digital transformation  
+- Productivity improvement  
+- Service redesign  
+- Sustainability  
+- Innovation adoption  
+- Workforce engagement  
+
+These initiatives are often delivered through disconnected systems. 
+
+Malue is building a platform that connects improvement activities into one continuous operational journey. 
+
+This creates opportunities for recurring software revenues, implementation services, data insights and long-term strategic partnerships. "
+  />
+
+  <StandardBlock
+    sectionID="our-vision"
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## Our **vision**  
+
+Today Malue focuses on operational improvement across healthcare. 
+
+Over time we believe every healthcare organisation should have a living operational improvement platform. 
+
+A place where: 
+
+- knowledge is captured  
+- evidence is generated  
+- decisions are informed  
+- implementation is supported  
+- impact is measured  
+- improvements are shared  
+
+Ultimately helping healthcare systems continuously learn from themselves.  "
+  />
+
+  <SimpleGrid
+    sectionID="investment-highlights"
+    headingHtml="<span class='highlight'>Investment</span> highlights"
+    items={[
+      {
+        title: "Large Market Opportunity",
+        description:
+          "Healthcare continues to seek better ways to improve productivity, efficiency and adoption.",
+      },
+      {
+        title: "Workflow-Driven Platform",
+        description:
+          "One core workflow engine supports multiple operational improvement pathways.",
+      },
+      {
+        title: "AI-Enabled",
+        description:
+          "AI supports users throughout capture, evaluation and implementation rather than replacing human judgement.",
+      },
+      {
+        title: "Evidence First",
+        description:
+          "Operational decisions are grounded in structured real-world evidence.",
+      },
+      {
+        title: "Benefits Realisation",
+        description:
+          "Improvement is measured after implementation, not assumed.",
+      },
+      {
+        title: "Mission Led",
+        description:
+          "Helping healthcare make every penny count through better operational decision making.",
+      },
+    ]}
+  />
+
+  <CTABlock
+    titleHtml="Join us"
+    description="We're looking for investors who share our belief that healthcare's biggest opportunity isn't simply creating better ideas &ndash; Sit's helping organisations adopt, scale and sustain them.  
+    
+If you're interested in supporting the next generation of operational improvement infrastructure for healthcare, we'd welcome a conversation. "
+    primaryHref="#"
+    primaryText="Button"
   />
 </Layout>

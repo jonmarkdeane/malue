@@ -1,0 +1,93 @@
+---
+import { marked } from "marked";
+import Button from "@components/Button.astro";
+
+export interface Props {
+  title?: string;
+  titleHtml?: string;
+  description?: string;
+  primaryText?: string;
+  primaryHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+}
+
+const {
+  title = "Title",
+  titleHtml,
+  description = "Some blurb",
+  primaryText,
+  primaryHref,
+  secondaryText,
+  secondaryHref,
+} = Astro.props as Props;
+---
+
+<div class="wrapper cta-wrapper">
+  <section class="cta">
+    <div class="cta-copy">
+      {titleHtml ? <h2 set:html={titleHtml} /> : <h2>{title}</h2>}
+      <div class="block-text" set:html={String(marked.parse(description))} />
+
+      {
+        primaryHref && (
+          <div class="cta-actions">
+            <Button href={primaryHref ?? "#"} appearance="primary">
+              {primaryText ?? "Partner With Us"}
+            </Button>
+            <Button href={secondaryHref ?? "#"} appearance="secondary">
+              {secondaryText ?? "Learn More"}
+            </Button>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</div>
+
+<style>
+  .cta-wrapper {
+    color: var(--off-white);
+    background: var(--brand-accent);
+  }
+
+  .cta {
+  text-align: center;
+    color: var(--off-white);
+    align-items: center;
+    gap: 48px;
+    max-width: 900px;
+  }
+
+  .cta-copy {
+    justify-items: center;
+  }
+
+
+  .cta-actions {
+    margin: 40px 0 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+ 
+
+  @media screen and (max-width: 980px) {
+
+
+  }
+
+  @media screen and (max-width: 640px) {
+    .cta {
+      text-align: left;
+      gap: 32px;
+    }
+
+    .cta-copy p {
+      font-size: 1rem;
+    }
+  }
+</style>

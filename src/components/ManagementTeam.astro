@@ -9,6 +9,7 @@ export interface Member {
 }
 
 export interface Props {
+  sectionID: string;
   eyebrow?: string;
   title?: string;
   titleHtml?: string;
@@ -17,13 +18,14 @@ export interface Props {
 }
 
 const {
+  sectionID,
   title = "Our leadership team",
   titleHtml,
   members = [],
 } = Astro.props as Props;
 ---
 
-<div class="wrapper">
+<div id={sectionID} class="wrapper">
   <section class="management-team">
     <div class="section-copy">
       {titleHtml ? <h2 set:html={titleHtml} /> : <h2>{title}</h2>}
@@ -45,12 +47,10 @@ const {
   </section>
 </div>
 
-
 <style>
   .management-team {
     display: grid;
     gap: 40px;
-
   }
 
   .eyebrow {

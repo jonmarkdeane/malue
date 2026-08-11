@@ -5,6 +5,7 @@ import Button from "@components/Button.astro";
 import pholder from "@assets/background.svg";
 
 export interface Props {
+    sectionID?: string;
   alignBody?: string;
   alignText?: string;
   textMarkdown: string;
@@ -15,6 +16,7 @@ export interface Props {
 }
 
 const {
+    sectionID,
   textMarkdown,
   alignBody = "left",
   alignText = "left",
@@ -25,7 +27,7 @@ const {
 } = Astro.props as Props;
 ---
 
-<div class="wrapper">
+<div id={sectionID} class="wrapper">
   <section class={`standard-block alignbody-${alignBody}`}>
     <div class={`block-copy aligntext-${alignText}`}>
       <div class="block-text" set:html={String(marked.parse(textMarkdown))} />
@@ -67,10 +69,12 @@ const {
 
   .standard-block.alignbody-center {
     flex-direction: column;
+    max-width: 900px;
   }
 
   .standard-block > div {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
   }

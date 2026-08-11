@@ -7,7 +7,7 @@ import photoA from "@assets/bloke.png";
 import photoB from "@assets/bloke.png";
 import photoC from "@assets/bloke.png";
 import photoD from "@assets/bloke.png";
-import pholder from "@assets/background.svg"
+import pholder from "@assets/background.svg";
 import StandardBlock from "@components/StandardBlock.astro";
 ---
 
@@ -21,10 +21,11 @@ import StandardBlock from "@components/StandardBlock.astro";
   />
 
   <StandardBlock
-  alignText="left"
-alignBody="right"
-imageAlt="Image"
-imageSrc={pholder}
+  sectionID="why-this-matters"
+    alignText="left"
+    alignBody="right"
+    imageAlt="Image"
+    imageSrc={pholder}
     textMarkdown=`## Why **Malue** exists
 Healthcare does not lack intelligence. It often lacks the infrastructure to capture that intelligence, structure it, compare it, act on it and scale it. Healthcare professionals know where waste happens. Patients experience the consequences of design decisions. Procurement teams understand the difficulty of complex choices. Industry partners often know where innovation can help, but need credible real-world evidence to support adoption.  
 Malue is being built to bring these perspectives together and help healthcare systems make better decisions and adopt better ways of working.  
@@ -37,6 +38,7 @@ Malue is designed to create commercial value and social value together. The comp
   />
 
   <ManagementTeam
+  sectionID="management-team"
     titleHtml="Our <span class='highlight'>management team</span>"
     members={[
       {
@@ -64,5 +66,40 @@ Malue is designed to create commercial value and social value together. The comp
         imageSrc: photoD,
       },
     ]}
+  />
+
+  <StandardBlock
+  sectionID="our-values"
+    alignBody="left"
+    alignText="left"
+    imageAlt="Image"
+    imageSrc={pholder}
+    textMarkdown="## Our **values**  
+
+At our culture day we agreed six values that describe who we are at our best: Integrity, Curiosity, Courage, Reciprocity, Generosity of Spirit and Embracing Difference. The qualities we also discussed — kindness, honesty, fairness, respect and dignity, justice, collaboration, transparency, stretch, and “we, not I” — are not separate values; they are how the six show up day to day. The paragraphs below try to capture that: how we want to work with each other, and how our customers should experience us.
+
+### Integrity
+
+We do what we say we will do, and we are honest even when it would be easier not to be. With each other, this means being open about what is working and what is not, giving each other the truth with care, and being fair and consistent in how decisions are made. Our customers experience this as transparency: no hidden surprises, honest conversations about what our platform can and cannot do, and a partner whose word can be trusted.
+
+### Curiosity
+
+We ask “why?” and “what if?” before we ask “how much?” We stay open to being wrong, listen more than we tell, and treat every problem — in our work and in our customers’ services — as something to understand deeply before we try to solve it. We stretch ourselves to keep learning, and we build that same spirit of enquiry into our offer, helping healthcare teams move from ideas to insight to adoption. Customers experience us as people who are interested in their world, not just our own.
+
+### Courage
+
+We speak up when something isn’t right, even when the room disagrees. We have the honest, sometimes uncomfortable conversations that kindness actually requires, and we back each other when we take considered risks. We stretch beyond what feels comfortable because that is where growth — ours and our customers’ — happens. Customers experience this as a partner willing to challenge constructively, name hard truths early, and stand behind what is right rather than what is easy.
+
+### Reciprocity
+
+We give as much as we take — in our team, with our customers, and across the health systems we serve. It is “we, not I”: we share credit, share knowledge, and step in for each other without keeping score. With customers, we build genuine two-way partnerships — we learn from their frontline wisdom as much as they benefit from what we have to offer, and value flows in both directions. Fair exchange, not extraction, is how we grow together.
+
+### Generosity of Spirit
+
+We assume good intent, lead with kindness, and give people our time, attention and patience — especially when they are struggling. We treat everyone with respect and dignity, celebrate each other’s wins as our own, and offer help before it is asked for. Customers experience this as warmth: people who go the extra mile, forgive honest mistakes, and care about the humans behind the healthcare, not just the contract.
+
+### Embracing Difference
+
+We believe better answers come from different perspectives, and we actively seek out voices unlike our own. With each other, this means listening to understand, making space for quieter views, and treating fairness and justice as everyday practices, not policies. With customers, it means respecting that every site, team and community is different — our offer adapts to their context rather than forcing them into ours. Difference is not something we tolerate; it is something we need."
   />
 </Layout>

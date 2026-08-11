@@ -8,20 +8,22 @@ export interface ServiceItem {
 }
 
 export interface Props {
+  sectionID: string;
   services: ServiceItem[];
   heading?: string;
   headingHtml?: string;
 }
 
 const {
+  sectionID,
   services = [],
   heading = "Who Malue supports",
   headingHtml,
 } = Astro.props as Props;
 ---
 
-<div class="wrapper">
-  <section class="who-we-help">
+<div id={sectionID} class="wrapper">
+  <section class="service-section">
     <div class="section-copy">
       {headingHtml ? <h2 set:html={headingHtml} /> : <h2>{heading}</h2>}
     </div>
@@ -45,7 +47,7 @@ const {
 </div>
 
 <style>
-  .who-we-help {
+  .service-section {
     display: grid;
     gap: 40px;
 

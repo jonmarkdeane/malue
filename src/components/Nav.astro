@@ -14,29 +14,39 @@
 
   <nav class="nav-menu" aria-label="Primary navigation">
     <div class="nav-links">
-      <a href="./about" class="nav-link">About us</a>
       <details class="nav-group">
+        <summary class="nav-link nav-summary"><a href="./about">About</a></summary>
+        <div class="submenu-panel">
+          <a href="./about#why-malue-exists" class="dropdown-link">Why Malue exists</a>
+          <a href="./about#managment-team" class="dropdown-link">Management Team</a>
+          <a href="./about#our-values" class="dropdown-link">Our values</a>
+        </div>
+      </details>      <details class="nav-group">
         <summary class="nav-link nav-summary"><a href="./what-we-do">What we do</a></summary>
         <div class="submenu-panel">
-          <a href="/whatwedo" class="dropdown-link">Overview</a>
-          <a href="/whatwedo#services" class="dropdown-link">Services</a>
-          <a href="/whatwedo#outcomes" class="dropdown-link">Outcomes</a>
+          <a href="./whatwedo" class="dropdown-link">Overview</a>
+          <a href="./whatwedo#services" class="dropdown-link">Services</a>
+          <a href="./whatwedo#outcomes" class="dropdown-link">Outcomes</a>
         </div>
       </details>
       <details class="nav-group">
         <summary class="nav-link nav-summary"><a href="./how-we-work">How we work</a></summary>
         <div class="submenu-panel">
-          <a href="/how-we-work" class="dropdown-link">Approach</a>
-          <a href="/how-we-work#process" class="dropdown-link">Process</a>
-          <a href="/how-we-work#team" class="dropdown-link">Team</a>
+          <a href="./how-we-work#who-malue-supports" class="dropdown-link">Who Malue supports</a>
+          <a href="./how-we-work#in-the-real-world" class="dropdown-link">In the real world</a>
         </div>
       </details>
       <details class="nav-group">
         <summary class="nav-link nav-summary"><a href="./investors">Investors</a></summary>
         <div class="submenu-panel">
-          <a href="/investors" class="dropdown-link">Why Invest</a>
-          <a href="/investors#portfolio" class="dropdown-link">Portfolio</a>
-          <a href="/investors#contact" class="dropdown-link">Connect</a>
+          <a href="./investors#why-this-matters" class="dropdown-link">Why this matters</a>
+          <a href="./investors#why-malue" class="dropdown-link">Why Malue?</a>
+          <a href="./investors#our-platform" class="dropdown-link">Our platform</a>
+          <a href="./investors#why-this-is-different" class="dropdown-link">Why this is different</a>
+          <a href="./investors#why-now" class="dropdown-link">Why now?</a>
+          <a href="./investors#built-through-verification" class="dropdown-link">Built through verification</a>
+          <a href="./investors#our-vision" class="dropdown-link">Our vision</a>
+          <a href="./investors#investment-highlights" class="dropdown-link">Investment highlights</a>
         </div>
       </details>
     </div>
@@ -147,7 +157,7 @@
     transition:
       opacity 0.2s ease,
       transform 0.2s ease;
-    min-width: 170px;
+    min-width: 270px;
   }
 
   @media (hover: hover) and (min-width: 769px) {
@@ -290,29 +300,49 @@
 
 <script type="module">
   if (typeof window !== 'undefined') {
-    // Close other open <details> when one opens
     const initNavGroups = () => {
       const containers = document.querySelectorAll('.nav-container');
+
       containers.forEach(container => {
         const groups = Array.from(container.querySelectorAll('details.nav-group'));
-        groups.forEach(g => {
-          g.addEventListener('toggle', () => {
-            if (g.open) {
-              groups.forEach(o => { if (o !== g) o.open = false; });
+        const menuToggle = container.querySelector('#menu-toggle');
+
+        const closeMenu = () => {
+          groups.forEach(group => {
+            group.open = false;
+          });
+
+          if (menuToggle) {
+            menuToggle.checked = false;
+          }
+        };
+
+        groups.forEach(group => {
+          group.addEventListener('toggle', () => {
+            if (group.open) {
+              groups.forEach(otherGroup => {
+                if (otherGroup !== group) {
+                  otherGroup.open = false;
+                }
+              });
             }
           });
         });
 
-        // Close all groups when clicking outside the nav container
-        document.addEventListener('click', (e) => {
-          if (!container.contains(e.target)) {
-            groups.forEach(o => { o.open = false; });
+        container.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!container.contains(event.target)) {
+            closeMenu();
           }
         });
       });
     };
 
-    // Init on DOM ready
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initNavGroups);
     } else {
