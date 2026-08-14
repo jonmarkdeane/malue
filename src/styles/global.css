@@ -118,6 +118,55 @@ h3 {
   margin: 0 0 0;
 }
 
+.content table,
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  background: var(--off-grey);
+  border: 1px solid var(--brand-secondary);
+  overflow: hidden;
+}
+
+.content th,
+.content td,
+.table th,
+.table td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--brand-secondary);
+}
+
+.content thead th,
+.table thead th {
+  background: var(--brand-secondary);
+  color: var(--off-white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.content tbody tr:last-child td,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.content tbody tr:hover,
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+@media screen and (max-width: 640px) {
+  .content table,
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 .highlight {
   color: var(--brand-accent);
   font-weight: 600;

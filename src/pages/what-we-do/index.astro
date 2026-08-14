@@ -1,20 +1,190 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Hero from '@components/Hero.astro';
-import heroImage from '@assets/heroes/malue-what-hero.png';
+import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero.astro";
+import heroImage from "@assets/heroes/malue-what-hero.png";
+import StandardBlock from "@components/StandardBlock.astro";
+import pholder from "@assets/background.svg";
+import CTABlock from "@components/CTABlock.astro";
 ---
 
 <Layout>
-	<Hero
+  <Hero
     eyebrow="What we do"
-		titleHtml="Lorem ipsum dolor sit amet, consectetur "
-		description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"
-		// primaryText="Partner With Us"
-		// primaryHref="./partner"
-		// secondaryText="Learn More"
-		// secondaryHref="./about" -->
-		imageAlt="Hero image"
-		imageSrc={heroImage}
-	/>
+    titleHtml="Lorem ipsum dolor sit amet, consectetur "
+    description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"
+    imageAlt="Hero image"
+    imageSrc={heroImage}
+  />
 
+  <StandardBlock
+    imageSrc={pholder}
+    imageAlt="image text"
+    alignBody="right"
+    alignText="left"
+    textMarkdown="## We help healthcare turn ideas into measurable improvements ##  
+
+Every day, healthcare professionals identify opportunities to improve patient care, reduce waste, increase efficiency and make better use of limited resources.  
+
+The challenge isn't finding ideas.  
+
+It's turning those ideas into sustainable change.  
+
+Malue provides the operational improvement infrastructure that helps healthcare organisations capture knowledge, evaluate opportunities, implement change and demonstrate measurable impact.  
+
+### Healthcare already knows many of the answers 
+	
+Healthcare generates an extraordinary amount of knowledge every single day  
+	
+Clinicians identify better ways of working.
+
+Operational teams solve complex service challenges.
+
+Patients provide valuable feedback.
+
+Industry develops new technologies.
+
+Researchers produce new evidence.
+
+Unfortunately, much of this knowledge remains fragmented, trapped within departments, spreadsheets, emails or isolated projects.
+
+As a result, good ideas are often lost, duplicated or never adopted beyond the team that created them.
+
+Malue helps organisations bring this knowledge together and turn it into structured, evidence-based improvement."
+  />
+
+  <StandardBlock
+    alignBody="center"
+    alignText="left"
+    textMarkdown="## We connect the entire improvement journey  ##  
+
+Operational improvement isn't a single event.  
+It's a continuous process.  
+Malue supports every stage of that journey through one connected platform. 
+
+### Capture 
+
+Collect ideas, challenges, evaluations, operational issues and frontline feedback from across the organisation.  
+Nothing valuable should disappear into an inbox or meeting note. 
+
+### Understand 
+
+AI helps organise information, identify common themes, surface relevant evidence and provide context that supports better decision-making.  
+The result is less time searching and more time understanding. 
+
+### Evaluate 
+
+Provide a structured process for assessing opportunities, engaging stakeholders, reviewing evidence and understanding potential impact before committing resources.  
+Better decisions begin with better evidence. 
+
+### Implement 
+
+Guide improvement projects through clearly defined pathways with tasks, documentation, governance and collaboration built into the process.  
+Helping teams move from planning into delivery with confidence. 
+
+### Measure 
+
+Track benefits, monitor outcomes and demonstrate whether improvements have delivered the expected clinical, operational and financial impact.  
+Improvement should be measurable, not assumed. 
+
+### Learn and Scale 
+
+Successful improvements become organisational knowledge that can be shared, adapted and replicated across departments and healthcare systems.  
+Every improvement strengthens the next.  "
+  />
+
+  <StandardBlock
+    imageSrc={pholder}
+    imageAlt="image text"
+    alignBody="left"
+    alignText="left"
+    textMarkdown="## Built around the way healthcare actually works   
+
+Healthcare improvement is rarely linear. 
+
+Projects evolve. 
+
+Evidence changes. 
+
+New stakeholders become involved. 
+
+Priorities shift. 
+
+Rather than forcing organisations into rigid workflows, Malue provides structured pathways that support real-world improvement while maintaining governance, transparency and consistency.   "
+  />
+
+  <StandardBlock
+    alignBody="right"
+    alignText="left"
+    imageSrc={pholder}
+    imageAlt="image text"
+    textMarkdown="## One platform. Multiple improvement pathways. 
+	
+Whether an organisation is: 
+
+- Developing a new service  
+- Evaluating a medical device  
+- Reviewing operational performance  
+- Capturing frontline ideas  
+- Managing improvement programmes  
+- Assessing innovation opportunities  
+- Building business cases  
+
+Measuring benefits after implementation the underlying process is remarkably similar. 
+
+Capture > Evaluate > Decide > Implement > Measure > Learn
+
+Malue brings these activities together within one connected operational improvement platform instead of multiple disconnected systems. "
+  />
+
+  <StandardBlock
+  alignBody="center"
+  textMarkdown="## AI that supports people – not replaces them 
+
+Artificial intelligence is embedded throughout Malue to help users work more efficiently. 
+
+It can assist with: 
+
+- Organising information  
+- Summarising evidence  
+- Identifying patterns  
+- Suggesting relevant guidance  
+- Drafting documentation  
+- Highlighting risks and opportunities  
+- Supporting decision-making  
+
+Final decisions always remain with the people responsible for delivering safe, effective healthcare. 
+
+AI becomes a trusted assistant rather than an autonomous decision-maker. "
+  />
+
+    <StandardBlock
+  alignBody="center"
+  textMarkdown="## The outcomes we help create 
+
+Our goal isn't simply to deliver software. 
+
+It's to help organisations build the capability to improve continuously. 
+
+With Malue, healthcare organisations can: 
+
+✓ Capture frontline knowledge before it's lost  
+✓ Make decisions using structured evidence  
+✓ Reduce duplication of improvement effort  
+✓ Improve collaboration across teams  
+✓ Accelerate implementation  
+✓ Measure real-world benefits  
+✓ Build a growing organisational knowledge base  
+✓ Scale successful improvements with confidence "
+  />
+
+    <CTABlock
+    titleHtml="Why Malue"
+    description="We believe healthcare doesn't need more disconnected systems.
+	It needs better infrastructure for continuous operational improvement. 
+	By connecting knowledge, evidence, governance, implementation and measurement into one platform, Malue helps organisations move beyond isolated projects towards a culture of learning, improvement and measurable impact. 
+	
+Malue is building the operational improvement infrastructure for healthcare."
+    primaryHref="./contact"
+    primaryText="Contact Us"
+  />
 </Layout>

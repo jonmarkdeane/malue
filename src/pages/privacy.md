@@ -2,128 +2,131 @@
 layout: ../layouts/standard-md.astro
 title: "Privacy Policy"
 author: "Malue Ltd"
-date: "03 Aug 2026"
+date: "14 Aug 2026"
 ---
-
-# Legal and Disclaimer
 
 ## Privacy Notice
 
-### General Privacy Statement
+**Last updated: 14 August 2026**
 
-At Malue Ltd (“Malue”), we are committed to protecting your personal information. This Privacy Notice outlines the types of personal information Malue may collect; the means by which Malue may collect, use, or share your personal information; steps Malue takes to protect your personal information; and choices you are provided with respect to the use of your personal information.
+### 1. Who we are 
 
-This Notice only applies to Malue websites that link to this Notice. Our websites also may contain links to third-party websites. We do not endorse and are not responsible for the content of third-party websites or resources, and our privacy notice does not apply to any sites that are not affiliated with Malue, even if you access them via a link on our site. You should review the privacy policies of any third-party site before providing any information.
+Malue Ltd (“Malue”, “we”, “us” or “our”) is developing technology and services to support healthcare organisations in identifying, implementing and evaluating opportunities to improve value. 
 
-For purposes of this Privacy Notice, “Personal Data” is any information by which you can be individually identified both directly and indirectly, including, but not limited to, your name, address, e-mail address, and telephone number. 
+For personal information collected through this website, Malue Ltd is the data controller. 
 
-### Minors
+Registered office: 6 Queen Street, Leeds, West Yorkshire, LS1 2TW, United Kingdom 
 
-This website is not designed or intended for use by children under the age of 16. We do not knowingly collect any Personal Data on this website from anyone under the age of 16 without the prior, verifiable consent of a parent or guardian. Such parent or guardian may have the right, upon request, to view the information provided by the child and require that it be deleted. Moreover, all minors should seek their parent’s or guardian’s permission prior to using or disclosing any Personal Data on this website or online resource. 
+Company number: 13449975 
 
-### Identity and Contact Details of the Data Controller
+Privacy contact: info@malue.co.uk 
 
-The data controller is Malue Ltd, 6 Queen Street, Leeds, West Yorkshire, LS1 2TW, United Kingdom.
+This notice explains how we use personal information collected through our public website. It does not apply to information processed through Malue's development pilots, prototypes or future platform services. Where Malue processes information in those contexts, an appropriate separate privacy notice or contractual arrangement will apply. 
 
-You may contact the data controller by mail at 6 Queen Street, Leeds, West Yorkshire, LS1 2TW, United Kingdom or email at global.privacy@malue.co.uk. 
+### 2. Information we collect 
 
-### How and Why We Process Your Personal Data
+Depending on how you use the website, we may collect: 
 
-On this website, we may request Personal Data about you. Examples of Personal Data that we may collect that directly identifies you includes your name, contact information, email address, and other information in combination with these identifiers. We may also may collect certain Personal Data that does not directly identify you by name, but could be used to identify that a specific computer or device has accessed our website.
+your name, job title, organisation and contact details; 
 
-We process your Personal Data on our websites for many reasons, including:
+information you include in an enquiry or other communication; 
 
--   To respond to your requests or inquiries;
--   To complete a transaction;
--   To personalize your experience;
--   To perform website analytics and measure website performance;
--   To track and monitor adverse events and other activities related to pharmacovigilance;
--   To maintain the website, including for security purposes.
+your communication and marketing preferences; 
 
-Several places on our website require Personal Data if you choose to use them, including surveys, registration, and content sharing features (i.e., “E-mail to a Friend” links). Malue and its business partners (such as service providers or other third parties who provide certain services to Malue) collect this information about you only if you voluntarily provide it to us. Please be aware that certain features of this site may not be available to you if you elect not to provide certain Personal Data. Any Personal Data you provide to us on our websites will be used in accordance with this Privacy Notice. 
+technical information such as IP address, browser type, device information and security logs; 
 
-### More Information on our Processing Activities
+information about how you use the website, where permitted through cookies or similar technologies; and 
 
-This table outlines each website-related processing activity in greater detail and provides information on the categories of information collected for each activity as well as the legal basis of processing for each of these activities, if and to the extent the data processing is subject to GDPR. 
+recruitment or supplier information, if you contact us in one of those capacities. 
 
-### Cookies and Other Web Trackers
+Please do not submit patient information, confidential clinical information or other sensitive personal information through the public website. 
 
-Our websites and online resources also collect other basic information about you which may not directly identify you, but which may correspond with you or a particular device. We use some of this information to allow our websites to run, as well as to learn more about how our websites and online resources are used and to otherwise improve and administer the site. We also use this information to enable us to deliver information tailored to your interests and preferences, based on your use of the site. For example, we may collect the IP Address assigned to your computer by your internet service provider. This address may change each time you connect to the internet (a “dynamic” IP address), or it may remain the same (a “static” IP address). In most cases, this information is collected automatically, for our legitimate business interests. In some jurisdictions, we ask for your consent before collecting this information, in which case you will be presented with a choice as to whether you wish to allow the collection and use of this type of information.
+### 3. How and why we use your information 
 
-Certain web browsers and other programs may be used to signal your preferences to Malue about how or whether Malue or third parties may collect information about your online activities. Currently, Malue does not respond to such signals. 
+| Purpose | Information used | Lawful basis |
+|----------|----------|----------|
+| Responding to enquiries and arranging discussions or demonstrations | Contact and enquiry information | Legitimate interests in communicating about our work, or steps requested before entering a contract |
+| Managing relationships with potential customers, partners, suppliers and advisers | Contact and correspondence information | Legitimate interests in operating and developing our business; contract where applicable |
+| Sending business updates or marketing communications | Contact details and preferences | Consent where required by law; otherwise our legitimate interests, subject to your right to object |
+| Operating, securing and improving the website | Technical, usage and security information | Legitimate interests in maintaining a secure and effective website |
+| Complying with legal and regulatory obligations | Relevant contact, transaction and correspondence information | Legal obligation |
+| Establishing or defending legal rights | Relevant records and correspondence | Legitimate interests in protecting our legal rights |
 
-### Use of Data for Marketing
+Where we rely on legitimate interests, we consider whether our interests are proportionate and whether your rights and interests require additional protection. 
 
-We do not sell or transfer your Personal Data to any non-affiliated entity for their own direct marketing use unless we provide clear notice to you and obtain your explicit consent. We use third party advertising companies to place ads on other websites. These companies may use data about your visits to this and other websites in order to measure advertising effectiveness and to provide advertisements about our goods and services that may be of interest to you. If you would like more information about this practice and your choices to opt out of having this information used by these companies, see our Cookies Policy.
+We do not currently use information collected through this website to make solely automated decisions that have legal or similarly significant effects on individuals. 
 
-We may also share your Personal Data with third parties, such as our service providers, for the following purposes: 
+### 4. Sharing information 
 
--   To help fulfill Malue business transactions; 
--   To conduct technical maintenance of our websites and other web platforms; 
--   To facilitate a merger, consolidation, transfer of control or other corporate reorganization in which Malue participates, or pursuant to a financial arrangement undertaken by Malue; 
--   To respond to appropriate requests of legitimate government authorities, or where required by applicable laws, court orders, or government regulations; and 
--   Where needed for corporate audits or to investigate or respond to a complaint or security threat 
+We may share personal information where necessary with: 
 
-### International Transfers of Your Personal Data 
+organisations providing website hosting, email, communications, analytics, security, customer-relationship management or professional services; 
 
-Any Personal Data you provide to us through your use of this website may be transferred to or stored in a geographic region that imposes different privacy obligations than your country of origin. This means that your Personal Data may be sent to a country with less restrictive data protection laws than your own. Any such transfer will be conducted in compliance with applicable law. 
+organisations with which we are exploring or delivering an authorised project; 
 
-If your Personal Data is covered by the GDPR: For transfers of Personal Data to a third country outside the European Union (EU), European Economic Area (EEA) or in absence of an adequacy decision, within the Malue Group, business partners and service providers, we establish the contracts containing the EU Standard Contractual Clauses, which according to the EU Commission decisions of 27 December 2004 (2004/915/EC) and 05 February 2010 (C(2010)593) or according to EU Commission decision of 04 June 2021 (EU 2021/914), whichever is applicable, constitute appropriate and suitable safeguards to ensure compliance with GDPR. 
+regulators, courts, law-enforcement bodies or other authorities where legally required; and 
 
-### Retention / Storage Period of Your Personal Data 
+a prospective purchaser, investor or adviser in connection with a genuine corporate transaction, subject to appropriate confidentiality protections. 
 
-The length of time in which we will store your Personal Data will differ depending on the purpose for which we have collected and are processing your data. In most cases, we will keep the data for three (3) years following our last interaction with you. We may, however, maintain your data for a longer period of time if we are required by law to maintain your data. 
+These organisations may act as our processors or, in some circumstances, as independent controllers. We do not sell personal information. You can contact us at info@malue.co.uk for further information about the suppliers we use. 
 
-### Information About Your Rights Regarding Your Personal Data 
+### 5. International transfers 
 
-You may have certain rights regarding our use and processing of your Personal Data. 
+Some service providers may process personal information outside the United Kingdom. Where a restricted transfer takes place, we use a lawful transfer mechanism, such as UK adequacy regulations, the UK International Data Transfer Agreement, the UK Addendum to approved EU Standard Contractual Clauses, or another mechanism permitted by UK data protection law. We undertake any required transfer assessment and apply appropriate safeguards. 
 
-### Your Rights If Your Data is Covered by the GDPR 
+You can contact us for further information about the safeguards relevant to your information. 
 
-If your Personal Data are covered by the GDPR (that is, if you are an individual within the European Economic Area), you have the following rights with respect to your Personal Data: 
+### 6. Retention 
 
--   The right to request access to the Personal Data that Malue has about you; 
--   The right to rectify or correct any Personal Data that is inaccurate or incomplete; 
--   The right to request a copy of your Personal Data in electronic format so that you can transmit the data to third parties, or to request that Malue directly transfer your Personal Data to one more third parties; 
--   The right to object to the processing of your Personal Data for marketing and other purposes; 
--   The right to erasure of your Personal Data when it is no longer needed for the purposes for which you provided it, as well as the right to restriction of processing of your Personal Data to certain limited purposes where erasure is not possible. 
+We keep personal information only for as long as reasonably necessary for the purpose for which it was collected, including legal, regulatory, security and record-keeping requirements. 
 
-To exercise any of these rights, please contact us using the information provided above. 
+As a general guide: 
 
-Please note that erasure or restriction of processing is only possible if and to the extent that the processing of Personal Data is based on your consent or our legitimate interests. If data processing is based on consent, note that you have the right to withdraw your consent at any time, but that the withdrawal of your consent does not affect the lawfulness of processing based on consent before its withdrawal. In the event of an erasure request, we may retain a copy of your Personal Data for our record-keeping purposes and to avoid entering your personal data in our systems after your request. 
+- routine enquiries: 24 months after the enquiry is closed; 
+- business relationship records: for the duration of the relationship and normally six years afterwards where required for contractual or legal purposes; 
+- marketing preferences and suppression records: for as long as needed to respect your preference; 
+- security and technical logs: normally 12 months; and 
+- cookie and analytics information: as described in our Cookie Notice below. 
 
-In the event that you believe or have the impression that our data processing does not comply with the GDPR, you are entitled to lodge a complaint with the responsible supervisory authority. 
+### 7. Cookies and similar technologies 
 
-### Data Security 
+We use technologies necessary to operate and secure the website. We also use analytics technologies to understand how the website is used. 
 
-Malue and its service providers and collaboration partners take reasonable steps to protect Personal Data we access or receive through this website from loss, misuse, and unauthorized access, disclosure, alteration, or destruction. Nevertheless, Malue makes no guarantee as to the security of your Personal Data and disclaims, to the fullest extent permitted by law, all liability and damages caused by loss, misuse, and unauthorized access, disclosure, alteration, or destruction. We recommend that you take any available precautions to protect Personal Data you submit on this website. 
+Optional technologies, including analytics, are not used until you have made a choice through the cookie banner shown when you first visit the website. You can withdraw or change that choice at any time through the “Cookie settings” link on our website. Further details — including each technology, provider, purpose and duration — are set out in our Cookie Notice below. 
 
-### Updates to This Privacy Notice 
+### 8. Your rights 
 
-From time to time, we may revise this Privacy Notice. Any such changes to this Privacy Notice will be reflected on this page. Malue recommends that you review this Privacy Notice regularly for any changes. The date on which this notice was last revised is located at the top of this notice. 
+Depending on the circumstances, you may have the right to: 
 
-## Legal Statement 
+- request access to your personal information; 
+- have inaccurate or incomplete information corrected; 
+- request erasure or restriction of processing; 
+- object to processing based on legitimate interests; 
+- object at any time to direct marketing; 
+- receive certain information in a portable format; 
+- withdraw consent, without affecting earlier lawful processing; and 
+- complain about our handling of your information. 
 
-### No warranty and no liability 
+Rights are not absolute and may depend on the applicable lawful basis and circumstances. To exercise a right, contact info@malue.co.uk. We may need to confirm your identity. 
 
-While Malue is making great efforts to include accurate and up-to-date information, we make no representations or warranties, express or implied, as to the accuracy or completeness of the information provided on this Website and disclaim any liability for the use of this site or any site linked to it. Malue may change this site at any time without notice but does not assume any responsibility to update it. All users agree that all access and use of this Website and on any Website linked to from this site and the content thereof is at their own risk. Neither Malue nor any other party involved in creating, producing or delivering this Website or on any Website linked to from this site shall be liable in any manner whatsoever for any direct, incidental, consequential, indirect or punitive damages arising out of your access, use or inability to use this Website or any Website linked to from this site, or any errors or omissions in the content thereof.
+If you have a concern, please contact us first so that we can investigate it. You may also complain to the Information Commissioner's Office at [ico.org.uk/make-a-complaint](https://ico.org.uk/make-a-complaint). 
 
-### No offer and no solicitation 
+### 9. Security 
 
-The information provided on this Website does not constitute an offer of or solicitation for the purchase or disposal of, trading or any transaction in any Malue securities. Investors must not rely on this information for investment decisions. 
+We use appropriate technical and organisational measures designed to protect personal information, taking account of its nature and the risks involved. No internet service can be guaranteed to be completely secure, but we regularly review our safeguards and those of relevant suppliers. 
 
-### Forward-looking information 
+### 10. Children 
 
-This page may contain forward-looking information. Such information is subject to a variety of significant uncertainties, including scientific, business, economic and financial factors, and therefore actual results may differ significantly from those presented. 
+This website is intended for business and professional audiences and is not directed at children. We do not knowingly collect personal information from children through the website. If you believe a child has provided information to us, please contact us. 
 
-### Links 
+### 11. Other websites 
 
-Links to third party pages are provided for convenience only. We do not express any opinion on the content of any third party pages and expressly disclaim any liability for all third party information and the use of it. 
+Our website may link to websites operated by third parties. Those organisations are responsible for their own privacy practices, and you should review their notices before providing personal information. 
 
-### Trademarks 
+### 12. Complaints 
 
-All mentioned trademarks are owned by or licensed to a Member of the Malue Group. 
+You may submit a data-protection complaint electronically by contacting info@malue.co.uk. We will acknowledge, investigate and communicate the outcome in accordance with applicable data protection law. 
 
-### Copyright 
+### 13. Changes to this notice 
 
-The Website of Malue and the information contained and referenced therein are for informational purposes only. Any reproduction, retransmission or other use is strictly prohibited. Request for permission to reproduce any information contained on this Website should be addressed to the Malue Webmaster.
+We may update this notice when our website, services or legal obligations change. The current version and its effective date will be published on this page. 
